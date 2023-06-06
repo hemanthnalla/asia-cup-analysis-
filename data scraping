@@ -1,0 +1,21 @@
+Extracting the data from ESPNcricinfo:
+Code snippet
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.espncricinfo.com/'
+response = requests.get(url)
+soup = BeautifulSoup(response.content, 'html.parser')
+
+# Find the table containing the player data
+table = soup.find('table', class_='table')
+
+# Extract the data from the table
+data = []
+for row in table.find_all('tr'):
+    player_data = []
+    for cell in row.find_all('td'):
+        player_data.append(cell.text)
+    data.append(player_data)
+Use code with caution. Learn more
+This code will extract the data from the player table on the ESPNcricinfo website. The data will be stored in a list of lists, where each inner list represents a single player's data.
