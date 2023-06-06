@@ -1,0 +1,19 @@
+
+Creating a heatmap of the results over the years:
+Code snippet
+import matplotlib.pyplot as plt
+
+# Create a figure and axes
+fig, ax = plt.subplots()
+
+# Plot the data as a heatmap
+ax.pcolormesh(df.set_index('Year').T)
+
+# Set the title and axis labels
+plt.title('Overall Performance of Players')
+plt.xlabel('Year')
+plt.ylabel('Player')
+
+# Show the plot
+plt.show()
+This code will create a heatmap of the results over the years. The heatmap will show how the overall performance of players has changed over time.
