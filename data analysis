@@ -1,0 +1,22 @@
+
+Analyzing the overall performance of players:
+Code snippet
+# Calculate the total runs scored by each player
+df['Total Runs'] = df['Runs'].sum()
+
+# Calculate the total wickets taken by each player
+df['Total Wickets'] = df['Wickets'].sum()
+
+# Calculate the average batting and bowling scores for each player
+df['Average Batting'] = df['Runs'] / df['Matches']
+df['Average Bowling'] = df['Wickets'] / df['Matches']
+
+# Calculate the strike rate and economy rate for each player
+df['Strike Rate'] = df['Runs'] / df['Balls Faced']
+df['Economy Rate'] = df['Runs'] / df['Overs Bowled']
+
+# Calculate the best bowling and batting figures for each player
+df['Best Bowling'] = df['Best Bowling'].astype(int)
+df['Best Score'] = df['Best Score'].astype(int)
+Use code with caution. Learn more
+This code will calculate the total runs scored, total wickets taken, average batting and bowling scores, strike rate, and economy rate for each player. It will also calculate the best bowling and batting figures for each player.
