@@ -1,0 +1,12 @@
+
+Cleaning the data:
+Remove any rows that do not contain all of the required data
+data = [row for row in data if len(row) == 10]
+
+Convert the data to a pandas DataFrame
+df = pd.DataFrame(data, columns=['Player', 'Matches', 'Runs', 'Wickets', 'Average', 'Strike Rate', 'Economy Rate', 'Best Bowling', 'Best Score'])
+
+Drop any rows that contain missing values
+df = df.dropna()
+
+This code will clean the data by removing any rows that do not contain all of the required data. It will also convert the data to a pandas DataFrame, which is a more convenient format for analysis.
